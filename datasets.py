@@ -32,8 +32,8 @@ class CustomDataset(Dataset):
 
         # read the image
         image = cv2.imread(image_path)
-        # convert BGR to RGB color format
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB).astype(np.float32)
+        # convert BGR to Grayscale color format
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY).astype(np.float32)
         image_resized = cv2.resize(image, (self.width, self.height))
         image_resized /= 255.0
         # capture the corresponding XML file for getting the annotations
