@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>n0101_png_jpg.rf.c037c652ceaf7c223b1a54cc719ef2ec.jpg</filename>
+	<path>n0101_png_jpg.rf.c037c652ceaf7c223b1a54cc719ef2ec.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Nodule</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>848</xmin>
+			<xmax>894</xmax>
+			<ymin>430</ymin>
+			<ymax>476</ymax>
+		</bndbox>
+	</object>
+</annotation>

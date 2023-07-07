@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>LIDC-IDRI-0001_png_jpg.rf.d409fa46c49d9419179648fd66c443a1.jpg</filename>
+	<path>LIDC-IDRI-0001_png_jpg.rf.d409fa46c49d9419179648fd66c443a1.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>1024</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Nodule</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>296</xmin>
+			<xmax>327</xmax>
+			<ymin>128</ymin>
+			<ymax>156</ymax>
+		</bndbox>
+	</object>
+</annotation>
