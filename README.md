@@ -30,13 +30,6 @@ The discriminator is based on **Faster R-CNN** architecture:
 - Provides bounding box detection capabilities
 - Enables the GAN to learn spatial relationships and object localization
 
-## Key Features
-
-- **Object-Aware Generation**: The discriminator's object detection capabilities guide the generators to create realistic spatial relationships
-- **Medical Image Specialization**: Optimized for grayscale medical imaging with appropriate preprocessing
-- **Dual Loss Functions**: Separate loss tracking for lung and nodule generation
-- **Bounding Box Integration**: Synthetic nodules are placed at detected bounding box locations
-- **Comprehensive Testing**: Built-in testing framework with statistical analysis
 
 ## Dataset Requirements
 
@@ -79,7 +72,7 @@ XML files should contain Pascal VOC format annotations:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/OmGuin/OB-GAN1)
 cd OB-GAN1
 ```
 
