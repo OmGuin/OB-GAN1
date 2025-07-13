@@ -1,6 +1,6 @@
 import torch
 
-#los pollos hermanos
+#hyperparameters
 BATCH_SIZE = 8
 RESIZE_TO = 1024 
 NUM_EPOCHS = 15 

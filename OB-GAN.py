@@ -1,11 +1,9 @@
+#Authored by: Om Guin
 import os
 from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
-# los dependencies sus
-
 import torch
 import torchvision
 import torchvision.datasets as dset
@@ -15,7 +13,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 import torchvision.transforms as transforms
 from torch.utils.data import DataLoader, random_split
-from torch.utils.tensorboard import SummaryWriter
+from torch.utils.tensorboard.writer import SummaryWriter
 from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 import time
 
@@ -85,8 +83,9 @@ class Discriminator(nn.Module):
         # load Faster RCNN pre-trained model
         self.model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
 
-        # get the number of input features
-        in_features = self.model.roi_heads.box_predictor.cls_score.in_features
+        # get the number of input features from the box predictor
+        # The box predictor has a cls_score layer with in_features attribute
+        in_features = self.model.roi_heads.box_predictor.cls_score.in_features  # type: ignore
         # define a new head for the detector with required number of classes
         self.model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes)
 
@@ -105,7 +104,7 @@ class Discriminator(nn.Module):
         loss_dict = self.model(images, targets)
 
         losses = sum(loss for loss in loss_dict.values())
-        loss_value = losses.item()
+        loss_value = losses
 
         return loss_value
 
@@ -189,9 +188,6 @@ from datasets import (
     create_train_dataset, create_valid_dataset,
     create_train_loader, create_valid_loader
 )
-import torch
-
-import matplotlib.pyplot as plt
 
 plt.style.use('ggplot')
 

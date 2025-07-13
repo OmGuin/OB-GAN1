@@ -98,7 +98,7 @@ def show_tranformed_image(train_loader):
     Only runs if `VISUALIZE_TRANSFORMED_IMAGES = True` in config.py.
     """
     if len(train_loader) > 0:
-        for i in range(1): # <------------------------------------------------------------------------- bruh lmao 
+        for i in range(1): #one batch 
             images, targets = next(iter(train_loader))
             images = list(image.to(DEVICE) for image in images)
             targets = [{k: v.to(DEVICE) for k, v in t.items()} for t in targets]
